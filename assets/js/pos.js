@@ -1918,8 +1918,12 @@ if (auth == undefined) {
 
 
 $.fn.print = function () {
-
-    printJS({ printable: receipt, type: 'raw-html' });
+    printJS({
+        printable: receipt,
+        type: 'raw-html',
+        style: ['@page {margin: 0mm;} body {margin: 0;} h4 {margin:0}'],
+        targetStyles: ['*']
+    });
 
 }
 
