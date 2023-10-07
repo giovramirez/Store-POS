@@ -77,13 +77,12 @@ contextMenu({
       label: "Reload", 
         click() {
           mainWindow.reload();
+      }},
+      {  label: 'Traducir a Español',
+        click(){
+          mainWindow.webContents.send('i18n-change', 'es')
+        }
       } 
-    // },
-    // {  label: 'Quit',  click:  function(){
-    //    mainWindow.destroy();
-    //     mainWindow.quit();
-    // } 
-  }  
   ],
 
 });
